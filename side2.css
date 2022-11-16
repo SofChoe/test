@@ -1,0 +1,57 @@
+/* Typografier */
+/* h1, h2 */ 
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/* andet tekst */ 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+#toppen {
+    display:none;
+}
+#cover {
+    height:100%;
+    width:100%;
+    box-sizing: border-box;
+    margin-top:82px;
+    padding-top: 20px;
+}
+#cover article{
+    max-width: 1155px;
+    margin: 0 auto;
+}
+#img {
+    box-sizing: border-box;
+    display:block;
+    width:50%;
+    height:auto;
+    float:left;
+    padding:0 20px;
+}
+
+.text {
+    box-sizing: border-box;
+    float:right;
+    margin:0;
+    width:50%;
+    padding:0 20px;
+}
+
+.klimavenlig #img{
+    display:none;
+}
+
+.klimavenlig .text{
+    width: 100%;
+}
+
+
+.alt {
+    box-sizing: border-box;
+    float:none;
+    position:relative;
+    top:73px;
+    max-width: 100%;
+    width:1600px;
+    padding:20px;
+    display:none;
+}

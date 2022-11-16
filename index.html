@@ -4,9 +4,149 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Velkommen til Zensoul kurophold</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="index.css">
+    <meta name="robots" content="noindex,nofollow">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="jquery.js"></script>
 </head>
-<body>
+<body id="side1">
+  <header>
+        <a href="index.html"><img id="logo" src="images/logo.png" alt="Logo for Zen Garden"></a>
+        <h1>Zensoul kurophold</h1>
+        <nav>
+            <table>
+                <tr>
+                    <td>
+                        <a id="linkside1" href="index.html">Forside</a>
+                    </td>
+                    <td>
+                        <ul><li>
+                        <a id="linkside1op" href="index.html#ophold">Ophold &#9660;</a>
+                            <ul class="drop">
+                                <li><a id="linkside2" href="side2.html">Yoga</a></li>
+                                <li><a id="linkside3" href="side3.html">Meditation</a></li>
+                                <li><a id="linkside4" href="side4.html">Spa</a></li>
+                            </ul>
+                        </li></ul>
+                    </td>
+                    <td>
+                        <a href="index.html#nyheder">Nyheder</a>
+                    </td>
+                    <td>
+                        <a href="index.html#kontakt">Kontakt</a>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+    </header>
+    <a href="#forside"><button id="toppen">&#9651;</button></a>
+    <fig id="klf"><button id="toggle">&#10005;</button><button id="klima">Klima venlig visning</button></fig>
+    <div id="divheader"></div>
+
+    <!-- Alt over denne linje skal kopieres til alle undersider -->
+    <div id="forside">
+        <article>
+            <fig id="forsideimg">
+                <figcaption id="forsidecap">
+                    Tid til rekreation, afstressning <br>og ny energi?
+                </figcaption>
+            </fig>
+            <p id="forsidecap2">Tid til rekreation, afstressning<br>og ny energi?</p>
+            <a href="index.html#kontakt">
+                <button id="forsidebook">
+                    Kontakt os i dag.
+                </button>
+            </a>
+        </article>
+    </div>
     
+    <div id="ophold">
+        <article>
+            <h2>Efterårsophold i unikke oplevelser</h2>
+            <table>
+                <tr>
+                    <td>
+                        <fig id="yoga"><img src="images/ophold/yoga.png"><figcaption><p>5 dags yoga&#45;retreat</p></figcaption></fig>
+                      <a href="side2.html"><button class="opbut">Læs mere</button></a>
+                    </td>
+                    <td>
+                        <fig id="meditation"><img src="images/ophold/meditation.png"><figcaption><p>7 dags meditations&#45;retreat</p></figcaption></fig>
+                      <a href="side3.html"><button class="opbut">Læs mere</button></a>
+                    </td>
+                    <td>
+                        <fig id="spa"><img src="images/ophold/spa.png"><figcaption><p>5 eller 7 dags spa&#45;retreat</p></figcaption></fig>
+                      <a href="side4.html"><button class="opbut">Læs mere</button></a>
+                    </td>
+            </table>
+        </article>
+    </div>
+    <div id="nyheder">
+
+            <h2>Nyt retreat med opstart i januar 2023</h2>
+            <table>
+                <tr>
+                    <td>
+                        <fig><img src="images/nyheder/smoothie.png"></fig>
+                    </td>
+                    <td>
+                        <fig><img src="images/nyheder/juice.png"></fig>
+                    </td>
+                </tr>
+            </table>
+            <article>
+                <tr>
+                    <td>
+                        <p>
+                        Vi tilbyder nu, som noget helt nyt, et detox retreat, også kaldet et faste retreat. 
+                        Faste er det nye sort. 
+                        Det har stort set ingen bivirkninger, og virker både forebyggende og sundhedsfremmende.
+                        Vi har specialiseret os i juicekur og 
+                        vandfaste. Følg med her, for at få det seneste nye indenfor sundhedsdiller.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </article>
+    </div>
+    <div id="kontakt">
+        <div class="segment">
+            <div class="float-left w-50p">
+                <img class="kort" src="images/kort.png" alt="Kort til zensoul kurophold"/>
+            </div>
+            <div class="float-right w-50p">
+                <blockquote>
+                    <p id="mail+nummer">info@zensoulkurophold.dk<br>+4501020304</p>
+                    <p id="CVR">CVR:00000009</p>
+                </blockquote>
+                <blockquote>
+                    <p id="tider">Mandag - Torsdag:<br>9.00 - 15.00<br><br>Fredag:<br>9.00 - 13.00</p>            
+                </blockquote>
+                <blockquote>
+                    <p id="adress">Zensoul kurophold<br>Bjørnebullervej 2<br>7400 Herning<br>Danmark</p>
+                </blockquote>
+                
+                <!-- not used -->
+                <!-- 
+                <table id="nomap">
+                    <tr>
+                        <td id="mai">
+                            <p id="mail+nummer">info@zensoulkurophold.dk<br>+4501020304</p>
+                            <p id="CVR">CVR:00000009</p>
+                        </td>
+                        <td id="tid">
+                            <p id="tider">Mandag - Torsdag:<br>9.00 - 15.00<br><br>Fredag:<br>9.00 - 13.00</p>
+                        </td>
+                        <td id="adr">
+                            <p id="adress">Zensoul kurophold<br>Bjørnebullervej 2<br>7400 Herning<br>Danmark</p>
+                        </td>
+                    </tr>
+                </table>
+                -->
+        
+            </div>
+        </div>
+    </div>
 </body>
 </html>

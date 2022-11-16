@@ -1,0 +1,276 @@
+/* Typografier */
+/* h1, h2 */ 
+    @import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/* andert tekst */ 
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+html, body{
+    margin:0; /* Vi sætter margin til 0 - default har en browser margin 10px*/
+}
+
+/*index css*/
+/* FORSIDE */
+
+#forside {
+    margin-top: 82px; /* start hvor topbaren slutter*/
+    /*height: fit-content;*/ /* kan være svær sammen med absolute position elementer*/
+    height: 50%;
+    padding-bottom: 20%; /* padding bottom frem for margin, fordi nu kan vi:*/
+    overflow:hidden; /* skjule alt der ikke er i vores boks*/
+
+    /* vi flytter billedet op fra forsideimg til #forside*/
+    background-color: #85af8b;
+    background-image: url(images/forside.jpg);
+    background-size:cover;
+    background-position: center center; /* center budskabet i midten*/
+    /*
+    background-attachment:scroll;
+    background-size:120%;
+    background-repeat: no-repeat;
+    */ /* Alle tre ovenstående ikke nødvendige når size er cover*/
+}
+
+
+#forside article {
+    max-width: 100%;
+    text-align: center;
+}
+#forsideimg {
+    
+    width:100%;
+    height:100%; /* Den her "duer ikke" fordi den matcher højden på hele browseren*/
+    position:relative;
+    left:0;
+    padding:0 0 50px 0;
+    margin:0;
+    z-index: -1;
+}
+
+#forsidecap {
+    text-align: center;
+    position: relative;
+    top:226px;
+    z-index: 2;
+    color:white;
+    font-weight: bold;
+    font-size: xx-large;
+}
+#forsidecap2 {
+    text-align: center;
+    position: relative;
+    top:100px;
+    z-index: 2;
+    color:white;
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom:-200px;
+    padding:0;
+    /*display:none;   */
+}
+
+#forside button {
+    height:fit-content;
+    /*width:180px;*/ /* Width lader vi bare være op til knappen selv */
+    border-radius:10px;
+    border:0;
+    padding:15px 30px; /* lidt mere padding jf design */ 
+    font-size:18px;
+    margin-top:350px;
+    text-align: center;
+    z-index: 7;
+    background-color: #e0edc7;
+    color:#374436;
+    cursor:pointer; /* giver en "hånd" over knappen */
+}
+#forside button:hover {
+    font-weight: bold; /* bemærk: når man bolder tekst, så bliver den større. Det betyder at knappen ser ud som om den flytter sig / "wobbler". Et alternativ er at sætte position:relative og top:1px left:1px så den lige "rykker" lidt.*/
+}
+/* OPHOLD */
+#ophold {
+    width:100%; /* block elementer er altid 100% */
+    /* H2 er re-stylet, så padding kommer her */
+    padding: 40px 0;
+}
+#ophold article {
+    text-align: center;
+    font-size: 15px;
+}
+#ophold h2 {
+    position: relative; /* OBS: gør ingenting medmindre der er sub-elementer der forholder sig til den (f.eks. noget der er absolute, inde i h2'eren)*/
+    color:#e0edc7;
+
+    /* Ny h2 styling - det er bedre at style på selve HTML-objektet, end at style andre rundt om elementet. På den måde kan i fjerne H2eren og alt ser stadig godt ud*/ 
+    color: white;
+    margin:0;
+    padding:0;
+    padding-bottom: 20px;
+
+}
+#ophold table {
+    box-sizing: border-box;
+    max-width:100%;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#ophold td {
+    width:33%;
+}
+#ophold img {
+    width:335;
+    height:335;
+}
+#ophold article {
+    text-align: center;
+}
+#ophold p {
+    color: white; /* match med illustrator */
+    margin:5px;
+}
+.opbut {
+    margin:5px;
+    background-color: #e0edc7;
+    border: 0;
+    border-radius: 7px;
+    padding:10px 20px; /* har tilføjet lidt mere her for at matche design*/
+    cursor:pointer; /* giver en "hånd" over knappen */
+}
+.opbut:hover {
+    font-weight: bold;
+}
+/* NYHEDER */
+#nyheder {
+    /* background-color: #e0edc7; */
+    background-size: 120%; /* uden background gør den her ingenting*/
+    box-sizing: border-box; /* der er en fordel at flytte "border-box" helt op til *{ } så man altid bruger den - men lige nu lader vi den blive her :) */
+    width: 100%; /* blocks er altid 100% width by default - så den her er redundant */
+    background-color: #dfedc6;
+    padding: 40px 0; /* lidt luft rundt om boksen */
+}
+#nyheder table {
+    box-sizing: border-box;
+    max-width:100%;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /*margin-top: -20px;*/ /* fjerner denne, i stedet styler jeg H2'eren */
+}
+#nyheder h2{
+    /* Ny h2 styling - det er bedre at style på selve HTML-objektet, end at style andre rundt om elementet. På den måde kan i fjerne H2eren og alt ser stadig godt ud*/ 
+    color: black;
+    margin:0;
+    padding:0;
+    padding-bottom: 20px; /* padding så den matcher den anden H2 */
+    /*text-align:left;*/ /* jf design skal den her være left-aligned, men det kræver en ekstra div wrapper og et mere "boks-baseret" html-layout. Jeg anbefaler i lader den her være centreret.*/
+
+}
+#nyheder td {
+    max-width:50%;
+}
+#nyheder img {
+    width:575px;
+}
+#nyheder p {
+    text-align: left;
+    /* overskriver margin der sættes nedenfor */
+    /*
+    margin-left:auto; 
+    margin-right:auto;
+    margin:0 50px;
+    */
+
+    /* vi sætter en max-width her, så den ikke bliver breddere end billederne*/
+    max-width: 1155px;
+    /* men så skal vi også placere den i midten - ellers står den til venstre */
+    margin: 0 auto;
+    /* og så lidt mere padding på :) */
+    padding-top: 20px;
+}
+#nyheder article {
+    width:100%;
+}
+/* KONTAKT*/
+#kontakt {
+    /*position:relative;*/ /* har ingen elementer der forholder sig til relative */
+    /*height: fit-content;*/
+    max-width:100%;
+    /*margin-top:50px;*/ /* Ingen margin - bare lad boksene køre direkte op af hinanden og fiks det i stedet med mere padding */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-sizing: border-box;
+    background: #364336;
+    color:#e0edc7;
+}
+#kontakt .segment { /* første div i kontakt..*/
+    max-width: 1155px; /* max-width + center*/
+    margin: 0 auto;
+    padding: 40px 0; /* giv "segment" lidt spacing op og ned*/
+    overflow:auto;
+}
+
+#kontakt blockquote {
+    text-align:center;
+    max-width: 100%;
+    color:#dfedc6; /* rettet til hvid */
+    padding-bottom: 10px; /* lidt spacing nedaf */
+/*    display:none;*/
+}
+
+#kontakt .kort{
+    /* height: auto gør at propertionerne er i orden selvom width ændrer sig */
+    width: 100%;
+    height: auto;
+}
+
+/* bruges ikke */
+/*
+#kontakt table {
+    box-sizing: border-box;
+    max-width:100%;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size:small;
+}
+#kontakt td {
+    padding:0 25px;
+} */
+
+.float-left{float:left;}
+.float-right{float:right;}
+.w-50p{width: 50%;}
+.w-100p{width: 100%}
+.w-25p{ width: 25%;}
+
+
+.klimavenlig #forside{
+    /* Vi minimerer blokken her med klimavenlig css */
+    background-image:none;
+    height: auto;
+    padding-bottom: 0;
+}
+
+.klimavenlig #ophold img{
+    display:none;
+}
+.klimavenlig #nyheder img{
+    display:none;
+}
+.klimavenlig #kontakt img{
+    display:none;
+}
+
+.klimavenlig #kontakt .kort{
+    display:none;
+}
+
+.klimavenlig #kontakt .w-50p{
+    width: 100%;
+    float:none;
+}
